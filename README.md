@@ -29,4 +29,5 @@ For default settings see [.overcommit.yml.example](.overcommit.yml.example).
 
 #### Hooks added
 
-- [InsertBranchNumber](prepare_commit_msg/insert_branch_number.rb)
+- prepare-commit-msg
+  - [InsertBranchNumber](prepare_commit_msg/insert_branch_number.rb)
