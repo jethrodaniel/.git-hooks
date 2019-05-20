@@ -36,6 +36,20 @@ gem install overcommit \
 
 Of course, you can always skip the hooks by appending `--no-verify` to your `git` commands.
 
+Or even
+
+```
+SKIP=TrailingWhitespace git ...
+```
+
+or
+
+```
+ONLY=TrailingWhitespace git ...
+```
+
+See [overcommit](https://github.com/sds/overcommit) for more details.
+
 **Note**:
 
 You should also add this to your global `gitignore`
