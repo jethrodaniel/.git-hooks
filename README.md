@@ -34,6 +34,8 @@ gem install overcommit \
   && overcommit --sign prepare-commit-msg
 ```
 
+Of course, you can always skip the hooks by appending `--no-verify` to your `git` commands.
+
 **Note**:
 
 You should also add this to your global `gitignore`
@@ -44,6 +46,7 @@ You should also add this to your global `gitignore`
 ```
 
 This may be `~/.gitignore`, or `~/.config/git/ignore`, depending on your configuration.
+
 
 ### What it do
 
