@@ -23,9 +23,10 @@ PreCommit:
       # Exclude a bunch of rails files (non-default)
       - app/assets/javascripts/plugin/**/*.js
       - app/assets/javascripts/smartwidgets/**/*.js
+      - app/assets/javascripts/app.config*
       - app/assets/stylesheets/**/*.scss
       - app/assets/fonts/**/*
-      - app/assets/javascripts/app.config.js.erb
+      - app/assets/images/**/*
       - app/views/ajax/data_list.json.erb
 
 PrepareCommitMsg:
