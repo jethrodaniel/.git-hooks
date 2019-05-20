@@ -23,6 +23,17 @@ overcommit --sign
 overcommit --sign prepare-commit-msg
 ```
 
+Or, if you just want to copy-pasta
+
+```
+gem install overcommit \
+  && overcommit --install \
+  && git clone https://github.com/jethrodaniel/.git-hooks \
+  && cp .git-hooks/.overcommit.yml.example .overcommit.yml \
+  && overcommit --sign \
+  && overcommit --sign prepare-commit-msg
+```
+
 ### What it do
 
 Sets a couple of default overcommit hooks, and adds a few more.
