@@ -34,6 +34,17 @@ gem install overcommit \
   && overcommit --sign prepare-commit-msg
 ```
 
+**Note**:
+
+You should also add this to your global `gitignore`
+
+```
+.overcommit.yml
+.git-hooks/
+```
+
+This may be `~/.gitignore`, or `~/.config/git/ignore`, depending on your configuration.
+
 ### What it do
 
 Sets a couple of default overcommit hooks, and adds a few more.
