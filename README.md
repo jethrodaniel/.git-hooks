@@ -21,6 +21,7 @@ git clone https://github.com/jethrodaniel/.git-hooks
 cp .git-hooks/.overcommit.yml.example .overcommit.yml
 overcommit --sign
 overcommit --sign prepare-commit-msg
+overcommit --sign commit-msg
 ```
 
 Or, if you just want to copy-pasta :spaghetti:
@@ -72,3 +73,5 @@ For default settings see [.overcommit.yml.example](.overcommit.yml.example).
 
 - prepare-commit-msg
   - [InsertBranchNumber](prepare_commit_msg/insert_branch_number.rb)
+- commit-msg
+  - [PreventTmpCommits](commit_msg/prevent_tmp_commits.rb)
