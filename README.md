@@ -15,7 +15,9 @@ And assuming you don't mind overwriting an existing `.overcommit.yml`,
 
 ```
 overcommit --install
-git submodule add https://github.com/jethrodaniel/.git-hooks
+git clone https://github.com/jethrodaniel/.git-hooks
+# Or add as a submodule
+# git submodule add https://github.com/jethrodaniel/.git-hooks
 cp .git-hooks/.overcommit.yml.example .overcommit.yml
 overcommit --sign
 overcommit --sign prepare-commit-msg
