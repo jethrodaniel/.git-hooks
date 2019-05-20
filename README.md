@@ -23,7 +23,7 @@ overcommit --sign
 overcommit --sign prepare-commit-msg
 ```
 
-Or, if you just want to copy-pasta
+Or, if you just want to copy-pasta :spaghetti:
 
 ```
 gem install overcommit \
