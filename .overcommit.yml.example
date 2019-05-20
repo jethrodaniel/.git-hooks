@@ -14,10 +14,24 @@
 # https://github.com/sds/overcommit#configuration
 
 PreCommit:
+  ALL:
+    quiet: false
+
   TrailingWhitespace:
     enabled: true
+    exclude:
+      # Exclude a bunch of rails files (non-default)
+      - app/assets/javascripts/plugin/**/*.js
+      - app/assets/javascripts/smartwidgets/**/*.js
+      - app/assets/stylesheets/**/*.scss
+      - app/assets/fonts/**/*
+      - app/assets/javascripts/app.config.js.erb
+      - app/views/ajax/data_list.json.erb
 
 PrepareCommitMsg:
+  ALL:
+    quiet: false
+
   InsertBranchNumber:
     description: 'Prepending number from branch name into commit subject'
     enabled: true
@@ -26,6 +40,9 @@ PrepareCommitMsg:
     on_warn: fail
 
 CommitMsg:
+  ALL:
+    quiet: false
+
   CapitalizedSubject:
     enabled: false
 
