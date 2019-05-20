@@ -4,12 +4,15 @@ module Overcommit::Hook::PrepareCommitMsg
   # Prepends the commit template with `[#x]`, where `x` is the first group
   # of numbers in the branch name.
   #
-  # Warns if the branch doesn't contain a number.
+  # Warns if the branch name doesn't contain a number.
   #
   class InsertBranchNumber < Base
     def run
-      return :pass unless !commit_message_source ||
-        commit_message_source == :commit # NOTE: avoid 'merge' and 'rebase'
+      case commit_message_source
+      when :commit, :template
+      else
+        return :pass # To avoid 'merge' and 'rebase'
+      end
 
       return :warn, 'Missing number in branch!' if branch_number.nil?
 
