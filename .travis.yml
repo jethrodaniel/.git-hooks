@@ -1,0 +1,8 @@
+# Travis CLI settings
+
+language: bash
+
+dist: xenial # Ubuntu 16.04
+
+script: ./install
+
