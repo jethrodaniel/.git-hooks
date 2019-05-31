@@ -13,3 +13,4 @@ gem install overcommit \
   && overcommit --sign \
   && overcommit --sign prepare-commit-msg \
   && overcommit --sign commit-msg
+  && echo -e "\n✔ Git hooks initalized in .git-hooks!"
