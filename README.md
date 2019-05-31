@@ -1,5 +1,7 @@
 # .git-hooks
 
+[![Build Status](https://travis-ci.com/jethrodaniel/.git-hooks.svg?branch=master)](https://travis-ci.com/jethrodaniel/.git-hooks)
+
 Some git hooks using the magnificent [overcommit](https://github.com/sds/overcommit).
 
 ### Installation
@@ -11,20 +13,7 @@ gem install overcommit
 ```
 
 And assuming you don't mind overwriting an existing `.overcommit.yml`,
-`cd` into your repo and run
-
-```
-overcommit --install
-git clone https://github.com/jethrodaniel/.git-hooks
-# Or add as a submodule
-# git submodule add https://github.com/jethrodaniel/.git-hooks
-cp .git-hooks/.overcommit.yml.example .overcommit.yml
-overcommit --sign
-overcommit --sign prepare-commit-msg
-overcommit --sign commit-msg
-```
-
-Or, if you just want to copy-pasta :spaghetti:
+`cd` into your repo, copy-pasta :spaghetti:, and run
 
 ```
 gem install overcommit \
