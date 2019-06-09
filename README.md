@@ -30,7 +30,5 @@ For default settings see [.overcommit.yml.example](.overcommit.yml.example).
 
 #### Hooks added
 
-- prepare-commit-msg
-  - [InsertBranchNumber](prepare_commit_msg/insert_branch_number.rb)
 - commit-msg
   - [PreventTmpCommits](commit_msg/prevent_tmp_commits.rb)

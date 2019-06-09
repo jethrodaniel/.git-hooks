@@ -33,9 +33,12 @@ PrepareCommitMsg:
   ALL:
     quiet: false
 
-  InsertBranchNumber:
-    description: 'Prepending number from branch name into commit subject'
+  ReplaceBranch:
     enabled: true
+    description: 'Prepends the commit message with text based on the branch name'
+    branch_pattern: '\A(\d+)-(\w+[-_]*.*)\z'
+    replacement_text: '[#\1]'
+    on_fail: warn
 
     # Remove this to _not_ fail when missing a number in the branch name
     on_warn: fail
