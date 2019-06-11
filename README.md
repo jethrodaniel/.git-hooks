@@ -6,12 +6,27 @@ Some git hooks using the magnificent [overcommit](https://github.com/sds/overcom
 
 ### Installation
 
+**Note**
+
+These instructions aren't _exactly_ accurate at the moment - they depend on
+overcommit's `master` branch.
+
+```
+git clone https://github.com/sds/overcommit.git
+cd overcommit
+gem build overcommit.gemspec
+gem install ./overcommit-0.48.1.gem
+```
+
+now you have the `master` branch built, yay.
+
+---
+
 Assuming you can install ruby gems without `sudo`
 
 ```
 curl https://raw.githubusercontent.com/jethrodaniel/.git-hooks/master/install.sh | bash
 ```
-
 You should also add this to your global `gitignore`
 
 ```
