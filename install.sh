@@ -15,6 +15,4 @@ gem install overcommit \
   && git clone https://github.com/jethrodaniel/.git-hooks \
   && cp .git-hooks/.overcommit.yml.example .overcommit.yml \
   && overcommit --sign \
-  && overcommit --sign prepare-commit-msg \
-  && overcommit --sign commit-msg \
   && echo -e "\n✔ Git hooks initalized in .git-hooks!"

@@ -49,6 +49,7 @@ CommitMsg:
 
   PreventTmpCommits:
     description: 'Prevents commits with temp-style subjects'
+    excludes_pattern: '(\[#\d+\])'
     enabled: true
 
   CapitalizedSubject:
