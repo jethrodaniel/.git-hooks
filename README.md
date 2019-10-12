@@ -1,5 +1,6 @@
 # .git-hooks
 
+![](https://github.com/jethrodaniel/.git-hooks/workflows/build/badge.svg)
 [![Build Status](https://travis-ci.com/jethrodaniel/.git-hooks.svg?branch=master)](https://travis-ci.com/jethrodaniel/.git-hooks)
 
 Some git hooks using the magnificent [overcommit](https://github.com/sds/overcommit).
@@ -28,5 +29,4 @@ For default settings see [.overcommit.yml.example](.overcommit.yml.example).
 
 #### Hooks added
 
-- commit-msg
-  - [PreventTmpCommits](commit_msg/prevent_tmp_commits.rb) (def still needs work)
+- none at this time
