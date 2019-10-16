@@ -2,6 +2,8 @@
 
 ![](https://github.com/jethrodaniel/.git-hooks/workflows/build/badge.svg)
 [![Build Status](https://travis-ci.com/jethrodaniel/.git-hooks.svg?branch=master)](https://travis-ci.com/jethrodaniel/.git-hooks)
+![](https://img.shields.io/github/license/jethrodaniel/.git-hooks.svg)
+
 
 Some git hooks using the magnificent [overcommit](https://github.com/sds/overcommit).
 
