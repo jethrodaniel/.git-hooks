@@ -29,7 +29,7 @@ Or (preferably) make this a git alias so you can rig this up to any repo:
 git config --global alias.hooks '!sh -c "curl https://raw.githubusercontent.com/jethrodaniel/.git-hooks/master/install.sh | bash"'
 ```
 
-Then just type `git hook` in your repo.
+Then just type `git hooks` in your repo.
 
 ### What it do
 
