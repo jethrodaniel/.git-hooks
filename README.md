@@ -23,12 +23,24 @@ You should also add these lines to your global `gitignore`
 
 That may be `~/.gitignore`, or `~/.config/git/ignore`, depending on your configuration.
 
+Or (preferably) make this a git alias so you can rig this up to any repo:
+
+```
+git config --global alias.hooks '!sh -c "curl https://raw.githubusercontent.com/jethrodaniel/.git-hooks/master/install.sh | bash"'
+```
+
+Then just type `git hook` in your repo.
+
 ### What it do
 
-Sets a couple of default overcommit hooks, and adds a few more.
+Sets a couple of default overcommit hooks, and ~~adds a few more~~.
 
 For default settings see [.overcommit.yml.example](.overcommit.yml.example).
 
 #### Hooks added
 
 - none at this time
+
+#### Thanks
+
+Big shoutout to [overcommit](https://github.com/sds/overcommit) for being a great (and well-maintained) gem.
