@@ -36,9 +36,13 @@ PrepareCommitMsg:
   ReplaceBranch:
     enabled: true
     description: 'Prepends the commit message with text based on the branch name'
-    branch_pattern: '\A(\d+)-(\w+[-_]*.*)\z'
+    branch_pattern: '\A(\d+)-(\w+).*\z'
     replacement_text: '[#\1]'
-    skipped_commit_types: ['message', 'squash', 'merge']
+    skipped_commit_types:
+     - 'message'  # if message is given via `-m`, `-F`
+     - 'commit'   # if `-c`, `-C`, or `--amend` is given
+     - 'merge'    # if merging
+     - 'squash'   # if squashing
 
     # Remove this to _not_ fail when missing a number in the branch name
     on_warn: fail
