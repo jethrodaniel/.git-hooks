@@ -1,27 +1,18 @@
-name: build
-
-on: [push]
-
+name: ci
+on: [push, pull_request]
 jobs:
-  ci:
-    name: build
-    runs-on: ubuntu-latest
+  test:
     strategy:
+      fail-fast: false
       matrix:
-        ruby: [ '2.4.x', '2.5.x', '2.6.x']
-
+        os: [ubuntu-latest, macos-latest]
+        # Due to https://github.com/actions/runner/issues/849, we have to use quotes for '3.0'
+        ruby: [2.5, 2.6, 2.7, '3.0', head, jruby, jruby-head, truffleruby, truffleruby-head]
+    runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v1
-
-    - name: set up ruby
-      uses: actions/setup-ruby@v1
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-
-    - name: setup bundler
-      run: |
-        gem install bundler
-
-    - name: install
-      run: |
-        ./install.sh
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - run: ./install.sh
